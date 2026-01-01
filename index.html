@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Holderness: Coast Defender</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3.80.1/dist/phaser.min.js"></script>
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <h1>Holderness: Coast Defender</h1>
+      <p class="sub">Protect towns along the Holderness Coast. Choose defences wisely—some protect here but worsen erosion down‑drift.</p>
+    </header>
+
+    <div id="hud">
+      <div class="stat"><span class="label">Budget</span> <span id="budget">£0</span></div>
+      <div class="stat"><span class="label">Score</span> <span id="score">0</span></div>
+      <div class="stat"><span class="label">Storm</span> <span id="storm">Calm</span></div>
+      <div class="stat"><span class="label">Selected</span> <span id="selected">None</span></div>
+      <button id="howtoBtn" class="btn">How to play</button>
+      <button id="restartBtn" class="btn">Restart</button>
+    </div>
+
+    <div id="game"></div>
+
+    <div id="toolbox">
+      <div class="toolbox-title">Defences</div>
+      <button class="tool" data-tool="seawall" title="Sea wall: strong but costly and needs repairs">
+        <img src="assets/img/icon_seawall.png" alt="Sea wall"><span>Sea wall</span><small>£350</small>
+      </button>
+      <button class="tool" data-tool="rocks" title="Rock armour: durable, medium cost">
+        <img src="assets/img/icon_rocks.png" alt="Rock armour"><span>Rock armour</span><small>£220</small>
+      </button>
+      <button class="tool" data-tool="groyne" title="Groyne: builds beach here, but can increase erosion down‑drift">
+        <img src="assets/img/icon_groyne.png" alt="Groyne"><span>Groyne</span><small>£160</small>
+      </button>
+      <button class="tool" data-tool="nourish" title="Beach nourishment: quick boost, wears off">
+        <img src="assets/img/icon_nourish.png" alt="Nourishment"><span>Nourish</span><small>£120</small>
+      </button>
+      <button class="tool" data-tool="retreat" title="Managed retreat: sacrifice land here to protect budget and focus elsewhere">
+        <img src="assets/img/icon_retreat.png" alt="Managed retreat"><span>Retreat</span><small>£80</small>
+      </button>
+
+      <div class="toolbox-title">Info</div>
+      <div class="mini">
+        <p><strong>Tip:</strong> Groynes trap sediment (longshore drift). Great locally… but may starve beaches <em>down‑drift</em>.</p>
+        <p class="tiny">Click a town segment to place the selected defence.</p>
+      </div>
+    </div>
+
+    <div id="modal" class="hidden" role="dialog" aria-modal="true">
+      <div class="modal-card">
+        <h2 id="modalTitle">How to play</h2>
+        <div id="modalBody"></div>
+        <div class="modal-actions">
+          <button id="modalClose" class="btn primary">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>Built for KS3 geography (Holderness Coast). Host on GitHub Pages. You can edit towns, costs, and storm difficulty in <code>game.js</code>.</p>
+    </footer>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
