@@ -100,3 +100,18 @@ code{background:rgba(255,255,255,.06);padding:2px 6px;border-radius:8px}
 @media (max-width:520px){
   .tool{width:100%}
 }
+
+
+
+/* FORCE defence labels to white for contrast */
+.tool span{
+  color:#ffffff;
+}
+.tool small{
+  color:#ffffff;
+  opacity:0.85;
+}
+.toolbox-title{
+  color:#ffffff;
+  opacity:0.9;
+}
