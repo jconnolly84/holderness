@@ -29,7 +29,7 @@ h1{margin:0;font-size:28px;letter-spacing:.2px}
   border-radius:14px;
 }
 .stat{display:flex;gap:10px;align-items:baseline;padding:6px 10px;background:rgba(255,255,255,.06);border-radius:12px}
-.label{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.8px}
+.label{color:#ffffff;font-size:12px;text-transform:uppercase;letter-spacing:.8px;opacity:0.9}
 #budget,#score,#storm,#selected{font-weight:700}
 .btn{
   border:1px solid rgba(255,255,255,.12);

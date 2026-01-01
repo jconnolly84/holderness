@@ -179,8 +179,8 @@ class MainScene extends Phaser.Scene {
       this.townAlive[idx] = true;
 
       const txt = this.add.text(x+18, y-20, `${t.name}\nHP: 100`, {
-        fontFamily: "system-ui,Segoe UI,Arial", fontSize: "12px", color: "#e8eefc",
-        stroke: "#000000", strokeThickness: 3
+        fontFamily: "system-ui,Segoe UI,Arial", fontSize: "12px", color: "#ffffff",
+        stroke: "#000000", strokeThickness: 4
       });
       txt.setDepth(6);
       this.townText[idx] = txt;
